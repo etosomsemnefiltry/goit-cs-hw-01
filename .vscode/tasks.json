@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run calc.asm",
+            "type": "shell",
+            "command": "nasm -f macho64 calc.asm && ld -macosx_version_min 10.7 -lSystem -o calc calc.o && ./calc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
